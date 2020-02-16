@@ -9,14 +9,17 @@ public class ManagerOfficer {
 	public managerOfficer() {
 		this.officers=new ArrayList<Officer>();
 	}
+	//add officer
 	public void addOfficer(Officer officer) {
 		this.officers.add(officer);
 	}
+	//search officer by name
 	public List<Officer> searchOfficerByName(String name){
 		
 		return officers.stream().filter(o -> o.getName().contains(name)).collect(Collectors.toList());
 		
 	}
+	//show list information officer
 	public void showListInforOfficer() {
 		this.officers.forEach(o->System.out.println(o.toString()));
 	}
